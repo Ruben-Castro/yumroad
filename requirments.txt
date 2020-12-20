@@ -1,0 +1,10 @@
+flask
+
+flask-sqlalchemy
+Flask-WTF
+
+gunicorn
+
+pytest
+pytest-flask
+pytest-cov

@@ -1,0 +1,26 @@
+{%extends'base_layout.html' %} {%block title%} All Products {%endblock%} {%block
+content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for product in products%}
+    <tr>
+      <td>
+        <a href="{{url_for('products.details', product_id=product.id)}}">
+          {{product.name}}
+        </a>
+      </td>
+
+      <td>{{product.description}}</td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+
+{%endblock%}
