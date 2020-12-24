@@ -29,7 +29,7 @@ def register():
     if form.validate_on_submit():
         user = User.create(form.email.data, form.password.data)
         db.session.add(user)
-        store = Store(name= form.store_name.data, creator=user)
+        store = Store(name= form.store_name.data, user=user)
         db.session.commit()
         login_user(user)
         flash("Registered successfully", "success")

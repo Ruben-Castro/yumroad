@@ -8,8 +8,8 @@ class Product(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(255), nullable=False)
     description = db.Column(db.String(120), nullable=True)
-    creator_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    store_id = db.Column(db.Integer, db.ForeignKey('store.id'))
+    creator_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    store_id = db.Column(db.Integer, db.ForeignKey('store.id'), nullable=False)
 
     creator = db.relationship("User", uselist=False, back_populates="products")
     store = db.relationship("Store", uselist=False, back_populates="products")
