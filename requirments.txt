@@ -1,10 +1,14 @@
-flask
+requests
+gunicorn
 
 flask-sqlalchemy
 Flask-WTF
-
-gunicorn
+flask-migrate
+flask-login
+wtforms[email]
 
 pytest
 pytest-flask
 pytest-cov
+
+flake8

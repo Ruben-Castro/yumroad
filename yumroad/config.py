@@ -10,7 +10,7 @@ class BaseConfig:
 class DevConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI="sqlite:///dev.db"
     SQLALCHEMY_ECHO = True
-    SECRET_KEY= os.getenv('SECRET_KEY')
+    SECRET_KEY= os.getenv('SECRET_KEY','c4d0da177fdf41b68da0f6728e86845f' )
     
 
 class TestConfig(BaseConfig):
